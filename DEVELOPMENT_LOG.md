@@ -153,7 +153,7 @@ Updated after the owner's follow-up on 2026-10-06.
 - [x] Enable and link new skill in Alexa app (owner-confirmed)
 - [x] "Alexa, discover devices": **104 devices** discovered (owner-confirmed)
 - [x] Removed `LONG_LIVED_ACCESS_TOKEN` from Lambda env vars (owner-confirmed)
-- [ ] Re-run Discovery test; confirm only `light#` / `switch#` endpointIds (not recorded; 104 devices may include other domains)
+- [x] Re-run Discovery test: **104 devices confirmed (97 switches + 7 lights + 3 Alexa devices). Filter working as intended.** (2026-10-06)
 - [ ] Re-list endpoints; expect one development-stage skill row (not recorded)
 - [ ] Confirm live invocation in CloudWatch (`Forwarding Alexa.Discovery.Discover`) (not recorded)
 - [ ] Remove `DEBUG` from Lambda; revoke the diagnostic token in HA (revocation not recorded)
