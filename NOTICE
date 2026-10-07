@@ -1,0 +1,10 @@
+ha-alexa-smarthome-lambda-fix
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+lambda/lambda_function.py is derived from the Alexa Smart Home Lambda reference
+implementation in the Home Assistant documentation.
+  Copyright 2019 Jason Hu <awaregit at gmail.com>
+  Licensed under the Apache License, Version 2.0
+
+The orphan cleanup approach builds on work shared in
+  https://github.com/Shereef/Python-Delete-Alexa-Devices/issues/9

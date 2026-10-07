@@ -1,0 +1,42 @@
+# Home Assistant configuration.yaml: Alexa Smart Home section
+# Region values below are for North America. See docs/01-home-assistant.md for EU / FE.
+
+alexa:
+  smart_home:
+    locale: en-US
+
+    # Proactive events: lets HA push state changes, additions, and DELETIONS to Alexa.
+    # The endpoint alone does nothing; client_id and client_secret are required.
+    # Get them from Alexa Developer Console -> your skill -> Build -> Permissions -> Send Alexa Events.
+    endpoint: https://api.amazonalexa.com/v3/events
+    client_id: !secret alexa_client_id
+    client_secret: !secret alexa_client_secret
+
+    # Always filter. Without a filter HA exposes everything Alexa can represent,
+    # which can blow past Alexa's ~300 endpoint discovery limit.
+    filter:
+      include_domains:
+        - light
+        - switch
+        # - script
+        # - scene
+        # - fan
+        # - lock
+        # - cover
+        # - climate
+      # include_entities:
+      #   - media_player.living_room
+      exclude_entities: []
+
+    # Optional: friendlier names / descriptions / display categories per entity
+    # entity_config:
+    #   switch.porch_plug:
+    #     name: "Porch Light"
+    #     display_categories: LIGHT
+
+# Optional: debug logging while troubleshooting linking
+# logger:
+#   default: warning
+#   logs:
+#     homeassistant.components.alexa: debug
+#     homeassistant.components.auth: debug
