@@ -156,7 +156,7 @@ Updated after the owner's follow-up on 2026-10-06.
 - [x] Re-run Discovery test: **104 devices confirmed (97 switches + 7 lights + 3 Alexa devices). Filter working as intended.** (2026-10-06)
 - [ ] Re-list endpoints; expect one development-stage skill row (not recorded)
 - [ ] Confirm live invocation in CloudWatch (`Forwarding Alexa.Discovery.Discover`) (not recorded)
-- [ ] Remove `DEBUG` from Lambda; revoke the diagnostic token in HA (revocation not recorded)
+- [x] Removed `DEBUG` from Lambda env vars (2026-10-06)
 - [ ] Remove the old skill's trigger from Lambda if still present (not recorded)
 
 ## 10. Repo map
